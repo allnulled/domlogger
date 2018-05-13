@@ -69,7 +69,7 @@ function DOMLogger(optionsParam = {}) {
 		var timer = new Timer();
 		/**
 		 * ----
-		 * @name DOMLoggerPanel
+		 * @name **DOMLoggerPanel**
 		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
@@ -112,7 +112,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name DOMLoggerMessage
+		 * @name **DOMLoggerMessage**
 		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
