@@ -47,10 +47,10 @@ JSON.stringifyOnce = function(obj, replacer, indent) {
 
 /**
  * ----
- * @name **DOMLogger(optionsParam)**
+ * @name **DOMLogger(optionsParam={})**
  * @type `{Class}`
  * @return `{DOMLogger}`
- * @parameter `optionsParam`
+ * @parameter `{Object} optionsParam` Object that defines the parameters of a DOMLogger instance.
  * @description Generates the base object of the DOMLogger API.
  */
 function DOMLogger(optionsParam = {}) {
@@ -151,7 +151,7 @@ function DOMLogger(optionsParam = {}) {
 		 * @name **otions**
 		 * @private yes
 		 * @type `{Object}`
-		 * @default Property componentClass: "".
+		 * @property componentClass: "".
 		 * @description Default option parameters for the current DOMLogger instance.
 		 */
 		var options = Object.assign({

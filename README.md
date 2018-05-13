@@ -100,13 +100,13 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger(optionsParam)**
+**Name:** **DOMLogger(optionsParam={})**
 
 **Type:** `{Class}`
 
 **Return:** `{DOMLogger}`
 
-**Parameter:** `optionsParam`
+**Parameter:** `{Object} optionsParam` Object that defines the parameters of a DOMLogger instance.
 
 **Description:** Generates the base object of the DOMLogger API.
 
@@ -162,7 +162,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 **Type:** `{Object}`
 
- Property componentClass: "".
+**Property:** componentClass: "".
 
 **Description:** Default option parameters for the current DOMLogger instance.
 
