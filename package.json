@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "instrument": "node_modules/.bin/rimraf coverage .nyc_output && node_modules/.bin/nyc instrument src src-cov",
+    "test": "node test/server/server.js",
     "docs": "node_modules/.bin/javadoc -i docs/README.ini.md src/domlogger.js docs/README.end.md -f markdown -o README.md"
   },
   "repository": {
@@ -30,6 +31,12 @@
   },
   "homepage": "https://github.com/allnulled/domlogger#readme",
   "devDependencies": {
-    "javadoc": "1.0.3"
+    "body-parser": "1.18.2",
+    "execute-command-sync": "1.0.2",
+    "express": "4.16.3",
+    "fs-extra": "6.0.1",
+    "javadoc": "1.0.3",
+    "nyc": "11.7.3",
+    "rimraf": "2.6.2"
   }
 }

@@ -3,8 +3,11 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Test for DOMLogger</title>
-	<link rel="stylesheet" type="text/css" href="../src/domlogger.css" />
-	<script src="../src/domlogger.js"></script>
+	<link  href="/src/domlogger.css" rel="stylesheet" type="text/css" />
+	<script src="/src-cov/domlogger.js"></script>
+	<script src="/static/jquery-3.3.1.js"></script>
+	<link  href="/static/qunit-2.4.1.css" rel="stylesheet" type="text/css" />
+	<script src="/static/qunit-2.4.1.js"></script>
 </head>
 <body>
 	<h1>Test for DOMLogger</h1>
@@ -18,37 +21,81 @@
 	<br/>
 	<button id="btnwrn" class=".dom-logger-message.warning-message">Warning message</button>
 
+	<div id="qunit"></div>
+
 	<script type="text/javascript">
 		window.addEventListener("load", function() {
-			
-			window.logger = new DOMLogger().show();
-
-			var msgs = [
-				"This is a message",
-				"This is another message",
-				"Lorem ipsum sometimes is boring",
-				"Feel free to use and abuse of this library",
-				"It is a simple utility to ease the job sometimes",
-				"Not a big deal, but sometimes, you know, it is good",
-				"Simple visual web logging",
-				"That is it",
-				"And just it",
-				"Also you can customize the CSS",
-				"And get awesome animations for your logging"
-			];
-
-			document.querySelectorAll("#btnlog")[0].onclick = function () {
-				logger.log(msgs[Math.floor(Math.random()*msgs.length)]);
-			}
-			document.querySelectorAll("#btnerr")[0].onclick = function () {
-				logger.error(msgs[Math.floor(Math.random()*msgs.length)]);
-			}
-			document.querySelectorAll("#btnwrn")[0].onclick = function () {
-				logger.warn(msgs[Math.floor(Math.random()*msgs.length)]);
-			}
-
-
-
+			QUnit.test("Basics", function(assert) {
+					assert.equal(true, true, "QUnit was loaded.");
+					window.logger = new DOMLogger().show();
+					var msgs = [
+							"This is a message",
+							"This is another message",
+							"Lorem ipsum sometimes is boring",
+							"Feel free to use and abuse of this library",
+							"It is a simple utility to ease the job sometimes",
+							"Not a big deal, but sometimes, you know, it is good",
+							"Simple visual web logging",
+							"That is it",
+							"And just it",
+							"Also you can customize the CSS",
+							"And get awesome animations for your logging"
+					];
+					var btnLog = document.querySelectorAll("#btnlog")[0];
+					var btnError = document.querySelectorAll("#btnerr")[0];
+					var btnWarn = document.querySelectorAll("#btnwrn")[0];
+					btnLog.onclick = function() {
+							logger.log(msgs[Math.floor(Math.random() * msgs.length)]);
+					};
+					btnError.onclick = function() {
+							logger.error(msgs[Math.floor(Math.random() * msgs.length)]);
+					};
+					btnWarn.onclick = function() {
+							logger.warn(msgs[Math.floor(Math.random() * msgs.length)]);
+					};
+					assert.equal(document.querySelectorAll(".dom-logger-panel")[0].children.length, 0, "Starts with 0 messages.");
+					btnLog.click();
+					btnError.click();
+					btnWarn.click();
+					assert.equal(document.querySelectorAll(".dom-logger-panel")[0].children.length, 3, "3 messages were added.");
+					logger.log({});
+					logger.error({});
+					logger.warn({});
+					logger.expand();
+					logger.compact();
+					logger.toggleCompact();
+					logger.isCompact();
+					logger.open();
+					logger.close();
+					logger.toggleOpen();
+					logger.isOpened();
+					logger.show();
+					logger.hide();
+					logger.toggleShow();
+					logger.isShown();
+					logger.clear();
+					// logger.destroy();
+					setTimeout(function() {
+							$.ajax({
+									type: "POST",
+									contentType: 'application/json',
+									data: JSON.stringify({
+											coverage: __coverage__
+									}),
+									url: "/coverage",
+									success: function(data) {
+											console.log("Received:", data)
+											$("body").prepend($("<a>").attr({
+													href: data.coverageLink,
+													target: "_blank"
+											}).text("Open coverage report"));
+									},
+									error: function() {
+											alert("Something happened with the coverage report generation. Please, check the console.");
+									}
+							});
+					}, 5000);
+			});
 
 		});
 	</script>

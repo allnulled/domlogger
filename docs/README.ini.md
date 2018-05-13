@@ -1,6 +1,9 @@
 /**
  * # domlogger
- *
+ * 
+ * 
+ * ![](https://img.shields.io/badge/domlogger-v1.0.0-green.svg) ![](https://img.shields.io/badge/visual%20tests-passing-green.svg) ![](https://img.shields.io/badge/stable-80%25-orange.svg)
+ * 
  * Simple visual web logging, based on the DOM.
  *
  *
