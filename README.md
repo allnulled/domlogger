@@ -42,7 +42,7 @@ logger.error(window);
 logger.warn(document.body);
 ```
 
-##### 3. Expand, compact or toggleExpansion:
+##### 3. Expand, compact or toggleCompact:
 
 ```js
 logger.expand();
@@ -50,7 +50,7 @@ logger.compact();
 logger.toggleCompact();
 ```
 
-##### 4. Open, close or toggle:
+##### 4. Open, close or toggleOpen:
 
 ```js
 logger.open();
