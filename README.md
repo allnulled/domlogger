@@ -159,7 +159,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **`otions`**
+**Name:** **`options`**
 
 **Private:** yes
 

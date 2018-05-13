@@ -148,7 +148,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **`otions`**
+		 * @name **`options`**
 		 * @private yes
 		 * @type `{Object}`
 		 * @property componentClass: "".
