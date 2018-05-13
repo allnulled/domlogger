@@ -190,7 +190,7 @@ function DOMLogger(optionsParam = {}) {
 		}
 		/**
 		 * ----
-		 * @name **DOMLogger.log(msg, isHTML)**
+		 * @name **DOMLogger.log(msg, isHTML=false)**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the message has to be taken as HTML (true) or as plain text. By default: false (plain text).
@@ -200,7 +200,7 @@ function DOMLogger(optionsParam = {}) {
 		logger.log = generateLogFunc(" blinked ", "");
 		/**
 		 * ----
-		 * @name **DOMLogger.error(message)**
+		 * @name **DOMLogger.error(msg, isHTML=false)**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the (string) messages have to be taken as HTML (true) or as plain text. By default: false (plain text).
@@ -210,7 +210,7 @@ function DOMLogger(optionsParam = {}) {
 		logger.error = generateLogFunc(" blinked error ", " error-message ");
 		/**
 		 * ----
-		 * @name **DOMLogger.warn(message)**
+		 * @name **DOMLogger.warn(msg, isHTML=false)**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the message has to be taken as HTML (true) or as plain text. By default: false (plain text).

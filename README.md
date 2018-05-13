@@ -172,7 +172,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.log(msg, isHTML)**
+**Name:** **DOMLogger.log(msg, isHTML=false)**
 
 **Type:** `{Function}`
 
@@ -190,7 +190,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.error(message)**
+**Name:** **DOMLogger.error(msg, isHTML=false)**
 
 **Type:** `{Function}`
 
@@ -208,7 +208,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.warn(message)**
+**Name:** **DOMLogger.warn(msg, isHTML=false)**
 
 **Type:** `{Function}`
 
