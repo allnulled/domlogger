@@ -70,7 +70,7 @@ function DOMLogger(optionsParam = {}) {
 		/**
 		 * ----
 		 * @name DOMLoggerPanel
-		 * @internal true
+		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
 		 * @description Instance of an HTMLElement of a DOMLoggerPanel.
@@ -113,7 +113,7 @@ function DOMLogger(optionsParam = {}) {
 		/**
 		 * ----
 		 * @name DOMLoggerMessage
-		 * @internal true
+		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
 		 * @parameter `{String}` msg 
@@ -149,7 +149,7 @@ function DOMLogger(optionsParam = {}) {
 		/**
 		 * ----
 		 * @name **otions**
-		 - @internals true
+		 * @private yes
 		 * @type `{Object}`
 		 * @default Property componentClass: "".
 		 * @description Default option parameters for the current DOMLogger instance.
