@@ -1,0 +1,35 @@
+{
+  "name": "domlogger",
+  "version": "1.0.0",
+  "description": "Simple visual web logging.",
+  "main": "src/domlogger.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node_modules/.bin/javadoc -i docs/README.ini.md src/domlogger.js docs/README.end.md -f markdown -o README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/domlogger.git"
+  },
+  "keywords": [
+    "visual",
+    "web",
+    "log",
+    "logger",
+    "logging",
+    "dom"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allnulled/domlogger/issues"
+  },
+  "homepage": "https://github.com/allnulled/domlogger#readme",
+  "devDependencies": {
+    "javadoc": "1.0.3"
+  }
+}

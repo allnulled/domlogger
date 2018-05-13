@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Test for DOMLogger</title>
+	<link rel="stylesheet" type="text/css" href="../src/domlogger.css" />
+	<script src="../src/domlogger.js"></script>
+</head>
+<body>
+	<h1>Test for DOMLogger</h1>
+	<h5>Demonstration for DOMLogger</h5>
+	<div>You should see a small square where you can see text appearing in one of the corners of the page.</div>
+	<div>Be sure that your browser lets you load files from your filesystem through <code>file://</code> protocol, or otherwise, the test could fail.</div>
+
+	<button id="btnlog" class=".dom-logger-message">Log message</button>
+	<br/>
+	<button id="btnerr" class=".dom-logger-message.error-message">Error message</button>
+	<br/>
+	<button id="btnwrn" class=".dom-logger-message.warning-message">Warning message</button>
+
+	<script type="text/javascript">
+		window.addEventListener("load", function() {
+			
+			window.logger = new DOMLogger().show();
+
+			var msgs = [
+				"This is a message",
+				"This is another message",
+				"Lorem ipsum sometimes is boring",
+				"Feel free to use and abuse of this library",
+				"It is a simple utility to ease the job sometimes",
+				"Not a big deal, but sometimes, you know, it is good",
+				"Simple visual web logging",
+				"That is it",
+				"And just it",
+				"Also you can customize the CSS",
+				"And get awesome animations for your logging"
+			];
+
+			document.querySelectorAll("#btnlog")[0].onclick = function () {
+				logger.log(msgs[Math.floor(Math.random()*msgs.length)]);
+			}
+			document.querySelectorAll("#btnerr")[0].onclick = function () {
+				logger.error(msgs[Math.floor(Math.random()*msgs.length)]);
+			}
+			document.querySelectorAll("#btnwrn")[0].onclick = function () {
+				logger.warn(msgs[Math.floor(Math.random()*msgs.length)]);
+			}
+
+
+
+
+		});
+	</script>
+
+</body>
+</html>
