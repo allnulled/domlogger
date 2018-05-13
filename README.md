@@ -100,7 +100,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger(optionsParam={})**
+**Name:** **`DOMLogger(optionsParam={})`**
 
 **Type:** `{Class}`
 
@@ -116,7 +116,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLoggerPanel**
+**Name:** **`DOMLoggerPanel`**
 
 **Private:** yes
 
@@ -132,7 +132,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLoggerMessage**
+**Name:** **`DOMLoggerMessage`**
 
 **Private:** yes
 
@@ -156,7 +156,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **otions**
+**Name:** **`otions`**
 
 **Private:** yes
 
@@ -172,7 +172,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.log(msg, isHTML=false)**
+**Name:** **`DOMLogger.log(msg, isHTML=false)`**
 
 **Type:** `{Function}`
 
@@ -190,7 +190,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.error(msg, isHTML=false)**
+**Name:** **`DOMLogger.error(msg, isHTML=false)`**
 
 **Type:** `{Function}`
 
@@ -208,7 +208,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.warn(msg, isHTML=false)**
+**Name:** **`DOMLogger.warn(msg, isHTML=false)`**
 
 **Type:** `{Function}`
 
@@ -226,7 +226,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.expand()**
+**Name:** **`DOMLogger.expand()`**
 
 **Type:** `{Function}`
 
@@ -240,7 +240,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.compact()**
+**Name:** **`DOMLogger.compact()`**
 
 **Type:** `{Function}`
 
@@ -254,7 +254,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.toggleCompact()**
+**Name:** **`DOMLogger.toggleCompact()`**
 
 **Type:** `{Function}`
 
@@ -268,7 +268,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.isCompact()**
+**Name:** **`DOMLogger.isCompact()`**
 
 **Type:** `{Function}`
 
@@ -282,7 +282,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.open()**
+**Name:** **`DOMLogger.open()`**
 
 **Type:** `{Function}`
 
@@ -296,7 +296,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.close()**
+**Name:** **`DOMLogger.close()`**
 
 **Type:** `{Function}`
 
@@ -310,7 +310,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.toggleOpen()**
+**Name:** **`DOMLogger.toggleOpen()`**
 
 **Type:** `{Function}`
 
@@ -324,7 +324,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.isOpened()**
+**Name:** **`DOMLogger.isOpened()`**
 
 **Type:** `{Function}`
 
@@ -338,7 +338,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.show()**
+**Name:** **`DOMLogger.show()`**
 
 **Type:** `{Function}`
 
@@ -352,7 +352,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.hide()**
+**Name:** **`DOMLogger.hide()`**
 
 **Type:** `{Function}`
 
@@ -366,7 +366,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.toggleShow()**
+**Name:** **`DOMLogger.toggleShow()`**
 
 **Type:** `{Function}`
 
@@ -380,7 +380,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.isShown()**
+**Name:** **`DOMLogger.isShown()`**
 
 **Type:** `{Function}`
 
@@ -394,7 +394,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.clear()**
+**Name:** **`DOMLogger.clear()`**
 
 **Type:** `{Function}`
 
@@ -408,7 +408,7 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **DOMLogger.destroy()**
+**Name:** **`DOMLogger.destroy()`**
 
 **Type:** `{Function}`
 

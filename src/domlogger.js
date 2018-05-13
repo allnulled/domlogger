@@ -47,7 +47,7 @@ JSON.stringifyOnce = function(obj, replacer, indent) {
 
 /**
  * ----
- * @name **DOMLogger(optionsParam={})**
+ * @name **`DOMLogger(optionsParam={})`**
  * @type `{Class}`
  * @return `{DOMLogger}`
  * @parameter `{Object} optionsParam` Object that defines the parameters of a DOMLogger instance.
@@ -69,7 +69,7 @@ function DOMLogger(optionsParam = {}) {
 		var timer = new Timer();
 		/**
 		 * ----
-		 * @name **DOMLoggerPanel**
+		 * @name **`DOMLoggerPanel`**
 		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
@@ -112,7 +112,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLoggerMessage**
+		 * @name **`DOMLoggerMessage`**
 		 * @private yes
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
@@ -148,7 +148,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **otions**
+		 * @name **`otions`**
 		 * @private yes
 		 * @type `{Object}`
 		 * @property componentClass: "".
@@ -190,7 +190,7 @@ function DOMLogger(optionsParam = {}) {
 		}
 		/**
 		 * ----
-		 * @name **DOMLogger.log(msg, isHTML=false)**
+		 * @name **`DOMLogger.log(msg, isHTML=false)`**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the message has to be taken as HTML (true) or as plain text. By default: false (plain text).
@@ -200,7 +200,7 @@ function DOMLogger(optionsParam = {}) {
 		logger.log = generateLogFunc(" blinked ", "");
 		/**
 		 * ----
-		 * @name **DOMLogger.error(msg, isHTML=false)**
+		 * @name **`DOMLogger.error(msg, isHTML=false)`**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the (string) messages have to be taken as HTML (true) or as plain text. By default: false (plain text).
@@ -210,7 +210,7 @@ function DOMLogger(optionsParam = {}) {
 		logger.error = generateLogFunc(" blinked error ", " error-message ");
 		/**
 		 * ----
-		 * @name **DOMLogger.warn(msg, isHTML=false)**
+		 * @name **`DOMLogger.warn(msg, isHTML=false)`**
 		 * @type `{Function}`
 		 * @parameter `{String|Any}` msg. Message to be logged.
 		 * @parameter `{Boolean}` isHTML. Indicates if the message has to be taken as HTML (true) or as plain text. By default: false (plain text).
@@ -220,7 +220,7 @@ function DOMLogger(optionsParam = {}) {
 		logger.warn = generateLogFunc(" blinked warning ", " warning-message ");
 		/**
 		 * ----
-		 * @name **DOMLogger.expand()**
+		 * @name **`DOMLogger.expand()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Expands the console of the logger through all the window.
@@ -233,7 +233,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.compact()**
+		 * @name **`DOMLogger.compact()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Compacts the console of the logger. Default position: bottom right.
@@ -246,7 +246,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.toggleCompact()**
+		 * @name **`DOMLogger.toggleCompact()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Compacts or expands the console of the logger through all the window.
@@ -263,7 +263,7 @@ function DOMLogger(optionsParam = {}) {
 
 		/**
 		 * ----
-		 * @name **DOMLogger.isCompact()**
+		 * @name **`DOMLogger.isCompact()`**
 		 * @type `{Function}`
 		 * @returns `{Boolean}` True if it is compacted.
 		 * @description Returns true if is is compacted.
@@ -279,7 +279,7 @@ function DOMLogger(optionsParam = {}) {
 		}
 		/**
 		 * ----
-		 * @name **DOMLogger.open()**
+		 * @name **`DOMLogger.open()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Opens the top buttons panel of the console of the logger.
@@ -292,7 +292,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.close()**
+		 * @name **`DOMLogger.close()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Leaves only the "Open" button visible, to open the top buttons panel the console of the logger.
@@ -306,7 +306,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.toggleOpen()**
+		 * @name **`DOMLogger.toggleOpen()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Opens or closes the console of the logger.
@@ -323,7 +323,7 @@ function DOMLogger(optionsParam = {}) {
 
 		/**
 		 * ----
-		 * @name **DOMLogger.isOpened()**
+		 * @name **`DOMLogger.isOpened()`**
 		 * @type `{Function}`
 		 * @returns `{Boolean}` True if it is opened.
 		 * @description Returns true if is is opened.
@@ -340,7 +340,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.show()**
+		 * @name **`DOMLogger.show()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Shows the console of the logger.
@@ -352,7 +352,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.hide()**
+		 * @name **`DOMLogger.hide()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Hides the console of the logger.
@@ -364,7 +364,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.toggleShow()**
+		 * @name **`DOMLogger.toggleShow()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Shows or hides the console of the logger.
@@ -380,7 +380,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.isShown()**
+		 * @name **`DOMLogger.isShown()`**
 		 * @type `{Function}`
 		 * @returns `{Boolean}` True if it is shown.
 		 * @description Returns true if it is shown.
@@ -397,7 +397,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.clear()**
+		 * @name **`DOMLogger.clear()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Clears the console of the logger.
@@ -409,7 +409,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * @name **DOMLogger.destroy()**
+		 * @name **`DOMLogger.destroy()`**
 		 * @type `{Function}`
 		 * @returns `{DOMLogger}` In order to keep it chainable, it returns the logger itself.
 		 * @description Destroys the console of the logger.
