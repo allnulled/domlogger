@@ -11,11 +11,9 @@ Simple visual web logging, based on the DOM.
 
 Then, in your browser, include the 2 files:
 
-```HTML
-
+```html
 <script src="node_modules/domlogger/src/domlogger.js"></script>
 <link rel="stylesheet" type="text/css" href="node_modules/domlogger/src/domlogger.css" />
-
 ```
 
 Then, you are ready to use it.
@@ -118,9 +116,9 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** DOMLoggerPanel
+**Name:** **DOMLoggerPanel**
 
-**Internal:** true
+**Private:** yes
 
 **Type:** `{Class}`
 
@@ -134,9 +132,9 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** DOMLoggerMessage
+**Name:** **DOMLoggerMessage**
 
-**Internal:** true
+**Private:** yes
 
 **Type:** `{Class}`
 
@@ -151,6 +149,22 @@ The instances of `DOMLogger` are provided with some properties and methods.
 **Altered:** className, title, +click, innerHTML | textContent.
 
 **Description:** Instance of an HTMLElement of a DOMLoggerMessage.
+
+
+
+ 
+
+----
+
+**Name:** **otions**
+
+**Private:** yes
+
+**Type:** `{Object}`
+
+ Property componentClass: "".
+
+**Description:** Default option parameters for the current DOMLogger instance.
 
 
 
