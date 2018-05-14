@@ -151,7 +151,7 @@ Here, you can find a deeper explanation:
  
 
 ----
-#### **`DOMLogger(optionsParam={})`**
+#### DOMLogger(optionsParam={})
 
 **Type:** `{Class}`
 
@@ -166,7 +166,7 @@ Here, you can find a deeper explanation:
  
 
 ----
-#### **`options`**
+#### options
 
 **Accessible:** *Extended by the `DOMLogger(optionsParam={})` parameter.*
 
@@ -186,7 +186,7 @@ Here, you can find a deeper explanation:
  
 
 ---- 
-#### **`domLogger._`**
+#### domLogger._
 
 **Type:** `{Object}`
 
@@ -197,7 +197,7 @@ Here, you can find a deeper explanation:
  
 
 ----
-#### **`domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)`**
+#### domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)
 
 **Type:** `{Function}`
 
@@ -231,7 +231,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.log(msg, isHTML=false)`**
+#### domLogger.log(msg, isHTML=false)
 
 **Type:** `{Function}`
 
@@ -248,7 +248,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.error(msg, isHTML=false)`**
+#### domLogger.error(msg, isHTML=false)
 
 **Type:** `{Function}`
 
@@ -265,7 +265,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.warn(msg, isHTML=false)`**
+#### domLogger.warn(msg, isHTML=false)
 
 **Type:** `{Function}`
 
@@ -282,7 +282,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.expand()`**
+#### domLogger.expand()
 
 **Type:** `{Function}`
 
@@ -295,7 +295,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.compact()`**
+#### domLogger.compact()
 
 **Type:** `{Function}`
 
@@ -308,7 +308,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.toggleCompact()`**
+#### domLogger.toggleCompact()
 
 **Type:** `{Function}`
 
@@ -321,7 +321,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.isCompact()`**
+#### domLogger.isCompact()
 
 **Type:** `{Function}`
 
@@ -334,7 +334,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.open()`**
+#### domLogger.open()
 
 **Type:** `{Function}`
 
@@ -347,7 +347,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.close()`**
+#### domLogger.close()
 
 **Type:** `{Function}`
 
@@ -360,7 +360,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.toggleOpen()`**
+#### domLogger.toggleOpen()
 
 **Type:** `{Function}`
 
@@ -373,7 +373,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.isOpened()`**
+#### domLogger.isOpened()
 
 **Type:** `{Function}`
 
@@ -386,7 +386,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.show()`**
+#### domLogger.show()
 
 **Type:** `{Function}`
 
@@ -399,7 +399,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.hide()`**
+#### domLogger.hide()
 
 **Type:** `{Function}`
 
@@ -412,7 +412,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.toggleShow()`**
+#### domLogger.toggleShow()
 
 **Type:** `{Function}`
 
@@ -425,7 +425,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.isShown()`**
+#### domLogger.isShown()
 
 **Type:** `{Function}`
 
@@ -438,7 +438,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.clear()`**
+#### domLogger.clear()
 
 **Type:** `{Function}`
 
@@ -451,7 +451,7 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
  
 
 ----
-#### **`domLogger.destroy()`**
+#### domLogger.destroy()
 
 **Type:** `{Function}`
 
