@@ -134,7 +134,7 @@ Here, you can find a deeper explanation:
  
 
 ----
-## DOMLogger(optionsParam={})
+### DOMLogger(optionsParam={})
 
 **Type:** `{Class}`
 

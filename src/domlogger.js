@@ -79,7 +79,7 @@ JSON.stringifyOnce = function(obj, replacer, indent) {
 
 /**
  * ----
- * ## DOMLogger(optionsParam={})
+ * ### DOMLogger(optionsParam={})
  * @type `{Class}`
  * @return `{DOMLogger}`
  * @parameter `{Object} optionsParam` Object that defines the parameters of a DOMLogger instance.
