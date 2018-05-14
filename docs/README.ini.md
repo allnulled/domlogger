@@ -40,7 +40,7 @@
  * logger.error(window);
  * logger.warn(document.body);
  * ////
- * logger.registerMessageType("ok", "okok", "okok", undefined, "OKAY");
+ * logger.registerMessageType("ok", "okok", "okok", (i)=>i, "OKAY");
  * logger.ok("Yeah!");
  * ```
  * 

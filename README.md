@@ -41,7 +41,7 @@ logger.log({message: "Object are valid, even if they are circular"});
 logger.error(window);
 logger.warn(document.body);
 ////
-logger.registerMessageType("ok", "okok", "okok", undefined, "OKAY");
+logger.registerMessageType("ok", "okok", "okok", (i)=>i, "OKAY");
 logger.ok("Yeah!");
 ```
 
@@ -106,7 +106,7 @@ This is the list of the current API:
 ```js
 DOMLogger(optionsParam={})
 options;
-domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined);
+domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined, msgTypeAbbr=undefined);
 domLogger.log(msg, isHTML=false);
 domLogger.error(msg, isHTML=false);
 domLogger.warn(msg, isHTML=false);
@@ -183,7 +183,7 @@ Here, you can find a deeper explanation:
  
 
 ----
-### domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)
+### domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined, msgTypeAbbr=undefined)
 
 **Type:** `{Function}`
 

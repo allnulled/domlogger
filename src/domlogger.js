@@ -50,7 +50,7 @@ JSON.stringifyOnce = function(obj, replacer, indent) {
  *  ```js
  *  DOMLogger(optionsParam={})
  *  options;
- *  domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined);
+ *  domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined, msgTypeAbbr=undefined);
  *  domLogger.log(msg, isHTML=false);
  *  domLogger.error(msg, isHTML=false);
  *  domLogger.warn(msg, isHTML=false);
@@ -229,7 +229,7 @@ function DOMLogger(optionsParam = {}) {
 		};
 		/**
 		 * ----
-		 * ### domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)
+		 * ### domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined, msgTypeAbbr=undefined)
 		 * @type `{Function}`
 		 * @parameter `{String} methodName`. Name of the method that will log this type of message.
 		 * @parameter `{String} classNameComponent`. Class applied to the `{HTMLElement}` of the logger component when a message is sent, that stays for less than 1 second. It is used to give some kind of visual effect for when that type of message is logged. Empty string by default.
