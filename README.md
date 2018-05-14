@@ -97,6 +97,33 @@ The API is focused, basically, in a class: `DOMLogger`.
 
 The instances of `DOMLogger` are provided with some properties and methods.
 
+This is the list of the current API:
+
+
+`DOMLogger(optionsParam={})`
+`options`
+`domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)`
+`domLogger.log(msg, isHTML=false)`
+`domLogger.error(msg, isHTML=false)`
+`domLogger.warn(msg, isHTML=false)`
+`domLogger.expand()`
+`domLogger.compact()`
+`domLogger.toggleCompact()`
+`domLogger.isCompact()`
+`domLogger.open()`
+`domLogger.close()`
+`domLogger.toggleOpen()`
+`domLogger.isOpened()`
+`domLogger.show()`
+`domLogger.hide()`
+`domLogger.toggleShow()`
+`domLogger.isShown()`
+`domLogger.clear()`
+`domLogger.destroy()`
+
+Here, you can find a deeper explanation:
+
+
 
 
  
@@ -119,48 +146,6 @@ The instances of `DOMLogger` are provided with some properties and methods.
 
 ----
 
-**Name:** **`DOMLoggerPanel()`**
-
-**Private:** yes
-
-**Type:** `{Class}`
-
-**Return:** `{HTMLElement}`
-
-**Description:** Instance of an HTMLElement of a DOMLoggerPanel.
-
-
-
- 
-
-----
-
-**Name:** **`DOMLoggerMessage(msg, isHTML=false, isDebugged=false)`**
-
-**Accessible:** *No.*
-
-**Type:** `{Class}`
-
-**Return:** `{HTMLElement}`
-
-**Parameter:** `{String} msgType`. Type of message to be logged. Typically: LOG, ERROR or WARN. It is an attribute added to the `data-message-type` attribute, and used when the message is clicked, to be logged in the browser console: `[LOG|ERROR|WARN]`.
-
-**Parameter:** `{String} msg`. Message to be logged.
-
-**Parameter:** `{Boolean} isHTML`. False by default.
-
-**Parameter:** `{Boolean} isDebugged`. False by default.
-
-**Altered:** className, title, +click, innerHTML | textContent.
-
-**Description:** Instance of an `{HTMLElement}` of a `{DOMLoggerMessage}`.
-
-
-
- 
-
-----
-
 **Name:** **`options`**
 
 **Accessible:** *Extended by the `DOMLogger(optionsParam={})` parameter.*
@@ -175,6 +160,18 @@ The instances of `DOMLogger` are provided with some properties and methods.
 ```
 
 **Description:** Default option parameters for the current `{DOMLogger}` instance. It is used as the base value of the `DOMLogger(optionsParam)` parameter.
+
+
+
+ 
+
+---- 
+
+**Name:** **`domLogger._`**
+
+**Type:** `{Object}`
+
+**Description:** This object holds some of the internals of the API, which will not be included in this documentation.
 
 
 

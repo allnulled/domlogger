@@ -43,6 +43,33 @@ JSON.stringifyOnce = function(obj, replacer, indent) {
  * The API is focused, basically, in a class: `DOMLogger`.
  * 
  * The instances of `DOMLogger` are provided with some properties and methods.
+ * 
+ * This is the list of the current API:
+ * 
+ * 
+ *  `DOMLogger(optionsParam={})`
+ *  `options`
+ *  `domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)`
+ *  `domLogger.log(msg, isHTML=false)`
+ *  `domLogger.error(msg, isHTML=false)`
+ *  `domLogger.warn(msg, isHTML=false)`
+ *  `domLogger.expand()`
+ *  `domLogger.compact()`
+ *  `domLogger.toggleCompact()`
+ *  `domLogger.isCompact()`
+ *  `domLogger.open()`
+ *  `domLogger.close()`
+ *  `domLogger.toggleOpen()`
+ *  `domLogger.isOpened()`
+ *  `domLogger.show()`
+ *  `domLogger.hide()`
+ *  `domLogger.toggleShow()`
+ *  `domLogger.isShown()`
+ *  `domLogger.clear()`
+ *  `domLogger.destroy()`
+ *
+ * Here, you can find a deeper explanation:
+ * 
  */
 
 /**
@@ -67,10 +94,10 @@ function DOMLogger(optionsParam = {}) {
 		};
 
 		var timer = new Timer();
-		/**
+		/*
 		 * ----
 		 * @name **`DOMLoggerPanel()`**
-		 * @private yes
+		 * @accessible *No.*
 		 * @type `{Class}`
 		 * @return `{HTMLElement}`
 		 * @description Instance of an HTMLElement of a DOMLoggerPanel.
@@ -110,7 +137,7 @@ function DOMLogger(optionsParam = {}) {
 				document.body.appendChild(logger._.component);
 				return logger._.panel;
 		};
-		/**
+		/*
 		 * ----
 		 * @name **`DOMLoggerMessage(msg, isHTML=false, isDebugged=false)`**
 		 * @accessible *No.*
@@ -155,6 +182,12 @@ function DOMLogger(optionsParam = {}) {
 		var options = Object.assign({
 				componentClass: ""
 		}, optionsParam);
+		/**
+		 * ---- 
+		 * @name **`domLogger._`**
+		 * @type `{Object}`
+		 * @description This object holds some of the internals of the API, which will not be included in this documentation.
+		 */
 		logger._ = {};
 		logger._.data = {};
 		logger._.data.timer = timer;
