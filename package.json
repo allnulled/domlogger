@@ -1,7 +1,7 @@
 {
   "name": "domlogger",
   "version": "1.0.0",
-  "description": "Simple visual web logging.",
+  "description": "Simple visual web logging, based on the DOM.",
   "main": "src/domlogger.js",
   "directories": {
     "doc": "docs",
