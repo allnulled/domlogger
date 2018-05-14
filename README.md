@@ -100,45 +100,28 @@ The instances of `DOMLogger` are provided with some properties and methods.
 This is the list of the current API:
 
 
-`DOMLogger(optionsParam={})`
-
-`options`
-
-`domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined)`
-
-`domLogger.log(msg, isHTML=false)`
-
-`domLogger.error(msg, isHTML=false)`
-
-`domLogger.warn(msg, isHTML=false)`
-
-`domLogger.expand()`
-
-`domLogger.compact()`
-
-`domLogger.toggleCompact()`
-
-`domLogger.isCompact()`
-
-`domLogger.open()`
-
-`domLogger.close()`
-
-`domLogger.toggleOpen()`
-
-`domLogger.isOpened()`
-
-`domLogger.show()`
-
-`domLogger.hide()`
-
-`domLogger.toggleShow()`
-
-`domLogger.isShown()`
-
-`domLogger.clear()`
-
-`domLogger.destroy()`
+```js
+DOMLogger(optionsParam={})
+options;
+domLogger.registerMessageType(methodName, classNameComponent="", classNameMessage="", modifierFunc=undefined);
+domLogger.log(msg, isHTML=false);
+domLogger.error(msg, isHTML=false);
+domLogger.warn(msg, isHTML=false);
+domLogger.expand();
+domLogger.compact();
+domLogger.toggleCompact();
+domLogger.isCompact();
+domLogger.open();
+domLogger.close();
+domLogger.toggleOpen();
+domLogger.isOpened();
+domLogger.show();
+domLogger.hide();
+domLogger.toggleShow();
+domLogger.isShown();
+domLogger.clear();
+domLogger.destroy();
+```
 
 ----
 
