@@ -31,7 +31,7 @@ The usage is very simple.
 const logger = new DOMLogger().show();
 ```
 
-##### 2. Use any of the 3 default methods for logging:
+##### 2. Use any of the 3 default methods for logging, or register your own:
 
 ```js
 logger.log("This is a simple message");
@@ -40,6 +40,9 @@ logger.warn("This is a warning message");
 logger.log({message: "Object are valid, even if they are circular"});
 logger.error(window);
 logger.warn(document.body);
+////
+logger.registerMessageType("ok", "okok", "okok", undefined, "OKAY");
+logger.ok("Yeah!");
 ```
 
 ##### 3. Expand, compact or toggleCompact:
