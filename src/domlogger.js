@@ -206,7 +206,7 @@ function DOMLogger(optionsParam = {}) {
 		 * var logger = new DOMLogger().show();
 		 * // This example uses jQuery:
 		 * $("<style>.okok{background:black;color:white}</style>").appendTo("head"); 
-		 * logger.registerMessageType("ok", "okok", "okok", , undefined, "OKAY");
+		 * logger.registerMessageType("ok", "okok", "okok", undefined, "OKAY");
 		 * logger.ok("Yeah!"); // This should add a new message, with black background, and white letters.
 		 * ```
 		 * 
