@@ -1,6 +1,6 @@
 {
   "name": "domlogger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple visual web logging, based on the DOM.",
   "main": "src/domlogger.js",
   "directories": {
@@ -8,9 +8,11 @@
     "test": "test"
   },
   "scripts": {
+    "build": "node_modules/.bin/js-export -i src/domlogger.univ.js -o src/domlogger.js",
+    "serve": "node_modules/.bin/http-server . -p 9999",
     "instrument": "node_modules/.bin/rimraf coverage .nyc_output && node_modules/.bin/nyc instrument src src-cov",
     "test": "node test/server/server.js",
-    "docs": "node_modules/.bin/javadoc -i docs/README.ini.md src/domlogger.js docs/README.end.md -f markdown -o README.md"
+    "docs": "node_modules/.bin/javadoc -i src/domlogger.js -f markdown -o README.md"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "execute-command-sync": "1.0.2",
     "express": "4.16.3",
     "fs-extra": "6.0.1",
+    "http-server": "^0.11.1",
     "javadoc": "1.0.3",
     "nyc": "11.7.3",
     "rimraf": "2.6.2"

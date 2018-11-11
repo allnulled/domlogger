@@ -3,11 +3,10 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Test for DOMLogger</title>
-	<link  href="/src/domlogger.css" rel="stylesheet" type="text/css" />
-	<script src="/src-cov/domlogger.js"></script>
-	<script src="/static/jquery-3.3.1.js"></script>
-	<link  href="/static/qunit-2.4.1.css" rel="stylesheet" type="text/css" />
-	<script src="/static/qunit-2.4.1.js"></script>
+	<link  href="../src/domlogger.css" rel="stylesheet" type="text/css" />
+	<script src="../src/domlogger.js"></script>
+	<link  href="//cdnjs.cloudflare.com/ajax/libs/qunit/2.8.0/qunit.css" rel="stylesheet" type="text/css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/qunit/2.8.0/qunit.js"></script>
 </head>
 <body>
 	<h1>Test for DOMLogger</h1>
@@ -75,6 +74,7 @@
 					logger.isShown();
 					logger.clear();
 					// logger.destroy();
+					/*
 					setTimeout(function() {
 							$.ajax({
 									type: "POST",
@@ -95,6 +95,7 @@
 									}
 							});
 					}, 5000);
+					//*/
 			});
 
 		});

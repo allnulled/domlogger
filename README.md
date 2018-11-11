@@ -453,8 +453,3 @@ logger.ok("Yeah!"); // This should add a new message, with black background, and
 
 This library can be very interesting and handy for random projects.
 
-
-
-
-
-# Read this file
