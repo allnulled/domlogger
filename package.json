@@ -12,7 +12,7 @@
     "serve": "node_modules/.bin/http-server . -p 9999",
     "instrument": "node_modules/.bin/rimraf coverage .nyc_output && node_modules/.bin/nyc instrument src src-cov",
     "test": "node test/server/server.js",
-    "docs": "node_modules/.bin/javadoc -i src/domlogger.js -f markdown -o README.md"
+    "docs": "node_modules/.bin/javadoc -i src/domlogger.univ.js -f markdown -o README.md"
   },
   "repository": {
     "type": "git",
