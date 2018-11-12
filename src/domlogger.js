@@ -10,38 +10,38 @@
     JSON.stringifyOnce = function(e, t, n) {
         var o = [];
         var r = [];
-        function s(n, s) {
+        function a(n, a) {
             if (o.length > 2e3) {
                 return "object too long";
             }
-            var a = false;
+            var s = false;
             o.forEach(function(e, t) {
-                if (e === s) {
-                    a = t;
+                if (e === a) {
+                    s = t;
                 }
             });
             if (n == "") {
                 o.push(e);
                 r.push("root");
-                return s;
-            } else if (a + "" != "false" && typeof s == "object") {
-                if (r[a] == "root") {
+                return a;
+            } else if (s + "" != "false" && typeof a == "object") {
+                if (r[s] == "root") {
                     return "(pointer to root)";
                 } else {
-                    return "(see " + (!!s && !!s.constructor ? s.constructor.name.toLowerCase() : typeof s) + " with key " + r[a] + ")";
+                    return "(see " + (!!a && !!a.constructor ? a.constructor.name.toLowerCase() : typeof a) + " with key " + r[s] + ")";
                 }
             } else {
                 var l = n || "(empty key)";
-                o.push(s);
+                o.push(a);
                 r.push(l);
                 if (t) {
-                    return t(n, s);
+                    return t(n, a);
                 } else {
-                    return s;
+                    return a;
                 }
             }
         }
-        return JSON.stringify(e, s, n);
+        return JSON.stringify(e, a, n);
     };
     function e(e = {}) {
         var t = this;
@@ -58,7 +58,7 @@
         var o = new n();
         var r = function() {
             var e = document.createElement("div");
-            e.innerHTML = `\n\t\t<div class="dom-logger-component ${a.componentClass}">\n\t\t\t<div class="dom-logger-toolbar">\n\t\t\t\t<div class="dom-logger-toolbar-btn expand-btn">Expand</div>\n\t\t\t\t<div class="dom-logger-toolbar-btn clear-btn">Clear</div>\n\t\t\t\t<div class="dom-logger-toolbar-btn closed-btn">Close</div>\n\t\t\t</div>\n\t\t\t<div class="dom-logger-wrapper">\n\t\t\t\t<div class="dom-logger-panel">\n\t\t\t\t\t\x3c!-- Logged Messages --\x3e\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>`;
+            e.innerHTML = `\n\t\t<div class="dom-logger-component ${s.componentClass}">\n\t\t\t<div class="dom-logger-toolbar">\n\t\t\t\t<div class="dom-logger-toolbar-btn expand-btn">Expand</div>\n\t\t\t\t<div class="dom-logger-toolbar-btn clear-btn">Clear</div>\n\t\t\t\t<div class="dom-logger-toolbar-btn closed-btn">Close</div>\n\t\t\t</div>\n\t\t\t<div class="dom-logger-wrapper">\n\t\t\t\t<div class="dom-logger-panel">\n\t\t\t\t\t\x3c!-- Logged Messages --\x3e\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>`;
             t._.wrapper = e.querySelectorAll(".dom-logger-wrapper")[0];
             t._.component = e.children[0];
             t._.panel = e.querySelectorAll(".dom-logger-panel")[0];
@@ -76,26 +76,32 @@
             t._.buttons.expand.addEventListener("click", function() {
                 t.toggleCompact();
             });
-            document.body.appendChild(t._.component);
+            if (document.readyState === "complete" || document.readyState === "interactive") {
+                document.body.appendChild(t._.component);
+            } else {
+                window.addEventListener("load", function() {
+                    document.body.appendChild(t._.component);
+                });
+            }
             return t._.panel;
         };
-        var s = function(e, n, o = false, r = false) {
-            var s = document.createElement(r ? "pre" : "div");
+        var a = function(e, n, o = false, r = false) {
+            var a = document.createElement(r ? "pre" : "div");
             if (o === true) {
-                s.innerHTML = n;
+                a.innerHTML = n;
             } else {
-                s.textContent = n;
+                a.textContent = n;
             }
-            s.className = "dom-logger-message ";
-            s.title = t._.data.timer.time() / 1e3;
-            s.addEventListener("click", function() {
+            a.className = "dom-logger-message ";
+            a.title = t._.data.timer.time() / 1e3;
+            a.addEventListener("click", function() {
                 var e = this.getAttribute("data-message-type");
-                var t = "[" + e + "][" + s.title.replace("\n", " ") + "] " + s.textContent;
+                var t = "[" + e + "][" + a.title.replace("\n", " ") + "] " + a.textContent;
                 console.log(t);
             });
-            return s;
+            return a;
         };
-        var a = Object.assign({
+        var s = Object.assign({
             componentClass: ""
         }, e);
         t._ = {};
@@ -105,23 +111,23 @@
         t._.panel = new r();
         t._.wrapper = t._.panel.parentElement;
         function l(e, n, o, r = undefined) {
-            return function(a, l = false) {
+            return function(s, l = false) {
                 var i;
                 var c = false;
-                if (typeof a !== "string") {
-                    i = JSON.stringifyOnce(a, null, 4);
+                if (typeof s !== "string") {
+                    i = JSON.stringifyOnce(s, null, 4);
                     l = false;
                     c = true;
                 } else {
-                    i = a;
+                    i = s;
                 }
-                var u = new s(e, i, l, c);
-                u.className += o;
-                u.setAttribute("data-message-type", e);
+                var d = new a(e, i, l, c);
+                d.className += o;
+                d.setAttribute("data-message-type", e);
                 if (typeof r === "function") {
-                    r(u);
+                    r(d);
                 }
-                t._.panel.insertBefore(u, t._.panel.children[0] || null);
+                t._.panel.insertBefore(d, t._.panel.children[0] || null);
                 t._.component.className += n;
                 t._.data.blinkedTimeoutId = setTimeout(function() {
                     if (t._.data.blinkedTimeoutId) {
@@ -131,8 +137,8 @@
                 return t;
             };
         }
-        t.registerMessageType = function(e, n = "", o = "", r = undefined, s = undefined) {
-            t[e] = l(s ? s : e.toUpperCase(), n, o, r);
+        t.registerMessageType = function(e, n = "", o = "", r = undefined, a = undefined) {
+            t[e] = l(a ? a : e.toUpperCase(), n, o, r);
             return t;
         };
         t.log = l("LOG", " blinked ", "");
